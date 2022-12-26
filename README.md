@@ -1,2 +1,2 @@
-# MSE-s-Symple-Blog
+#  MisakaE BlogSystem
 A very simp blog
