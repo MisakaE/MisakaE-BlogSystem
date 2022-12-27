@@ -1,0 +1,11 @@
+body {
+    padding-bottom: 20px;
+    background-color: #fdeff2;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+.navbar .navbar-brand{
+    color:#fdeff2;
+}

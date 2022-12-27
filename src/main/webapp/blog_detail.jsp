@@ -15,8 +15,12 @@
     <script src="editor.md/lib/prettify.min.js"></script>
     <script src="editor.md/editormd.js"></script>
     <link rel="stylesheet" href="editor.md/css/editormd.min.css" />
+    <link rel="stylesheet" href="css/detil.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
+<div class="right">
+<div class="blog-content">
     <div id="title"></div>
     <div id="content" style="opacity: 80%"></div>
 
@@ -26,10 +30,13 @@
         $.getJSON(url,function (detail){
 
             let str=detail.body;
-            editormd.markdownToHTML("content",{markdown : str});
+            editormd.markdownToHTML('content',{markdown : str});
             tit.innerHTML = "<h2> "+detail.title + "</h2>"
 
         })
     </script>
+
+</div>
+</div>
 </body>
 </html>

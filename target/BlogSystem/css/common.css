@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 给整个页面加上背景图 */
+html,body {
+    height: 100%;
+}
+
+body {
+    background-image: url(../image/555.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+
+    background-color: rgba(51,51,51,0.5);
+    color: white;
+
+    /* 导航栏内部的内容，都是一行排列的 */
+    display: flex;
+    /* 实现子元素垂直居中 */
+    align-items: center;
+}
+.nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.nav .spacer{
+    width: 80%;
+}
+
+.nav a {
+    color:white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* 版心样式 */
+.container {
+    /* 版心略小于窗口 */
+    width: 1000px;
+    /* 闪出导航栏的高度 */
+    height: calc(100% - 50px);
+
+    /* 水平居中 */
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .left {
+    height: 100%;
+    width: 200px;
+}
+
+.container .right {
+    height: 100%;
+    width: 795px;
+
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+
+    overflow:auto;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+
+    padding: 30px;
+}
+
+.card img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.card a {
+    /* 默认a是行内元素，很多功能对行内元素不生效，需要将其设为块级元素 */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    padding: 10px;
+}
+
+.card .counter {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}

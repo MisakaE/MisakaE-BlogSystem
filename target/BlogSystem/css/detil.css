@@ -1,0 +1,35 @@
+body {
+    padding-bottom: 20px;
+    background-color: #fdeff2;
+}
+.blog-content {
+    padding: 30px;
+}
+
+.blog-content h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.blog-content .date {
+    text-align: center;
+    color: rgb(0,128,0);
+    padding: 10px 0;
+}
+
+.blog-content p {
+    text-indent: 2em;
+    padding: 10px 0;
+}
+.container {
+    /* 版心略小于窗口 */
+    width: 1000px;
+    /* 闪出导航栏的高度 */
+    height: calc(100% - 50px);
+
+    /* 水平居中 */
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+}
