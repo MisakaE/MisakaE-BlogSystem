@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
         if(session==null) {
             //检测下会话是否存在，不存在说明未登录
             User user=new User();
-            user.setuid(-1);
+            user.setUid(-1);
             resp.getWriter().write(objectMapper.writeValueAsString(user));
             return;
         }
@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
         if(user==null) {
             //虽然会话存在，但是会话里没有user对象，也视为未登录
             user=new User();
-            user.setuid(-1);
+            user.setUid(-1);
             resp.getWriter().write(objectMapper.writeValueAsString(user));
             return;
         }

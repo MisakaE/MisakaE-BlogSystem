@@ -5,6 +5,7 @@
   Time: 9:55
   To change this template use File | Settings | File Templates.
 --%>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -41,8 +42,10 @@
     <script type="text/javascript">
         $(function() {
             var editor = editormd("editor", {
+                tex : true,
                 width: "100%",
                 height: "100%",
+                height: 740,
                 //markdown: "To Begin",     // dynamic set Markdown text
                 path : "editor.md/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
             });

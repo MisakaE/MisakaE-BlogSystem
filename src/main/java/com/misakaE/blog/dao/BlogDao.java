@@ -2,6 +2,7 @@ package com.misakaE.blog.dao;
 
 import com.misakaE.blog.po.Blog;
 import com.misakaE.blog.util.DBUtil;
+import com.misakaE.blog.dao.ValueDao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -88,4 +89,22 @@ public class BlogDao {
         }
         return null;
     }
-}
+    //删除博客
+    public void delete(int bid){
+        Connection connection=null;
+        PreparedStatement statement=null;
+        try {
+            connection=DBUtil.getConnection();
+            String sql="delete from blogdate where bid=?";
+            statement=connection.prepareStatement(sql);
+            statement.setInt(1,bid);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(null,statement,connection);
+        }
+    }
+
+    }
+

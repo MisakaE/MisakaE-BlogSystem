@@ -1,11 +1,18 @@
 body {
     padding-bottom: 20px;
-    background-color: #fdeff2;
+    background: url("../image/background1.jpg") no-repeat center center fixed;
+    //background-size: 1920px;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    //background-color: #fdeff2;
 }
 
 .navbar {
     margin-bottom: 20px;
 }
 .navbar .navbar-brand{
+
     color:#fdeff2;
+
 }

@@ -24,7 +24,7 @@ public class UserDao {
             //使用unique约束
             if(resultSet.next()) {
                 User user=new User();
-                user.setuid(resultSet.getInt("uid"));
+                user.setUid(resultSet.getInt("uid"));
                 user.setUsername(resultSet.getString("username"));
                 user.setUserpwd(resultSet.getString("password"));
                 user.setNick(resultSet.getString("nick"));

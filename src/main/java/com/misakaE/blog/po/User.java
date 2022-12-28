@@ -6,7 +6,7 @@ public class User {
     private String userpwd;
     private String nick;
     private String head;
-    public int getuid() {
+    public int getUid() {
         return uid;
     }
 
@@ -17,13 +17,13 @@ public class User {
     public String getPassword() {
         return userpwd;
     }
-    public String getnick() {
+    public String getNick() {
         return nick;
     }
-    public String gethead() {
+    public String getHead() {
         return head;
     }
-    public void setuid(int uid) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
     public void setUsername(String username) {

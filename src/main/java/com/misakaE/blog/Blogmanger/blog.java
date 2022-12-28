@@ -9,6 +9,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
+import java.time.*;
+import java.util.Timer;
 
 import static java.time.LocalTime.now;
 
@@ -38,7 +40,7 @@ public class blog extends HttpServlet {
         }
     }
     //新建博客
-    @Override
+    @Override   
     protected void doPost(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException{
 
         req.setCharacterEncoding("utf8");//编码
@@ -52,7 +54,8 @@ public class blog extends HttpServlet {
         Blog blog=new Blog();
         blog.setTitle(title);
         blog.setBody(body);
-        blog.setBid(3);
+        int Hash=body.hashCode();
+        blog.setBid(Hash);
         BlogDao blogDao=new BlogDao();
         blogDao.insert(blog);
         //重定向到博客列表页
